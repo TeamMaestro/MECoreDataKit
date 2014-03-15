@@ -1,0 +1,10 @@
+PODS:
+  - MEFoundation (1.0.3)
+
+DEPENDENCIES:
+  - MEFoundation (~> 1.0.3)
+
+SPEC CHECKSUMS:
+  MEFoundation: 3b09ef7a4ab91d01f16dab805605c03cf9d4f0cd
+
+COCOAPODS: 0.29.0

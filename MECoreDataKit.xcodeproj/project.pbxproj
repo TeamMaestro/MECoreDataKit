@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		798D9C4B18D4E23400F0A2AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798D9C4A18D4E23400F0A2AB /* Foundation.framework */; };
-		798D9C5018D4E23400F0A2AB /* MECoreDataKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 798D9C4F18D4E23400F0A2AB /* MECoreDataKit.h */; };
-		798D9C5218D4E23400F0A2AB /* MECoreDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D9C5118D4E23400F0A2AB /* MECoreDataKit.m */; };
 		798D9C5918D4E23400F0A2AB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798D9C5818D4E23400F0A2AB /* XCTest.framework */; };
 		798D9C5A18D4E23400F0A2AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798D9C4A18D4E23400F0A2AB /* Foundation.framework */; };
 		798D9C5C18D4E23400F0A2AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798D9C5B18D4E23400F0A2AB /* UIKit.framework */; };
 		798D9C5F18D4E23400F0A2AB /* libMECoreDataKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798D9C4718D4E23400F0A2AB /* libMECoreDataKit.a */; };
 		798D9C6518D4E23400F0A2AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 798D9C6318D4E23400F0A2AB /* InfoPlist.strings */; };
 		798D9C6718D4E23400F0A2AB /* MECoreDataKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D9C6618D4E23400F0A2AB /* MECoreDataKitTests.m */; };
+		798D9C7518D4E4CE00F0A2AB /* NSManagedObject+MEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D9C7218D4E4CE00F0A2AB /* NSManagedObject+MEExtensions.m */; };
+		798D9C7618D4E4CE00F0A2AB /* NSManagedObjectContext+MEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 798D9C7418D4E4CE00F0A2AB /* NSManagedObjectContext+MEExtensions.m */; };
+		81E88E95909949C9A807A9D6 /* libPods-MECoreDataKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7C342302194B60A36698C7 /* libPods-MECoreDataKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,24 +36,28 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				798D9C5018D4E23400F0A2AB /* MECoreDataKit.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A6304DBA94C45FCA12CEE63 /* Pods-MECoreDataKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MECoreDataKit.xcconfig"; path = "Pods/Pods-MECoreDataKit.xcconfig"; sourceTree = "<group>"; };
 		798D9C4718D4E23400F0A2AB /* libMECoreDataKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMECoreDataKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		798D9C4A18D4E23400F0A2AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		798D9C4E18D4E23400F0A2AB /* MECoreDataKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MECoreDataKit-Prefix.pch"; sourceTree = "<group>"; };
-		798D9C4F18D4E23400F0A2AB /* MECoreDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MECoreDataKit.h; sourceTree = "<group>"; };
-		798D9C5118D4E23400F0A2AB /* MECoreDataKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MECoreDataKit.m; sourceTree = "<group>"; };
 		798D9C5718D4E23400F0A2AB /* MECoreDataKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MECoreDataKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		798D9C5818D4E23400F0A2AB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		798D9C5B18D4E23400F0A2AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		798D9C6218D4E23400F0A2AB /* MECoreDataKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MECoreDataKitTests-Info.plist"; sourceTree = "<group>"; };
 		798D9C6418D4E23400F0A2AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		798D9C6618D4E23400F0A2AB /* MECoreDataKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MECoreDataKitTests.m; sourceTree = "<group>"; };
+		798D9C7018D4E4CE00F0A2AB /* MECoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MECoreDataKit.h; sourceTree = "<group>"; };
+		798D9C7118D4E4CE00F0A2AB /* NSManagedObject+MEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+MEExtensions.h"; sourceTree = "<group>"; };
+		798D9C7218D4E4CE00F0A2AB /* NSManagedObject+MEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+MEExtensions.m"; sourceTree = "<group>"; };
+		798D9C7318D4E4CE00F0A2AB /* NSManagedObjectContext+MEExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+MEExtensions.h"; sourceTree = "<group>"; };
+		798D9C7418D4E4CE00F0A2AB /* NSManagedObjectContext+MEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+MEExtensions.m"; sourceTree = "<group>"; };
+		DF7C342302194B60A36698C7 /* libPods-MECoreDataKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MECoreDataKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				798D9C4B18D4E23400F0A2AB /* Foundation.framework in Frameworks */,
+				81E88E95909949C9A807A9D6 /* libPods-MECoreDataKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +91,7 @@
 				798D9C6018D4E23400F0A2AB /* MECoreDataKitTests */,
 				798D9C4918D4E23400F0A2AB /* Frameworks */,
 				798D9C4818D4E23400F0A2AB /* Products */,
+				2A6304DBA94C45FCA12CEE63 /* Pods-MECoreDataKit.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +110,7 @@
 				798D9C4A18D4E23400F0A2AB /* Foundation.framework */,
 				798D9C5818D4E23400F0A2AB /* XCTest.framework */,
 				798D9C5B18D4E23400F0A2AB /* UIKit.framework */,
+				DF7C342302194B60A36698C7 /* libPods-MECoreDataKit.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,8 +118,8 @@
 		798D9C4C18D4E23400F0A2AB /* MECoreDataKit */ = {
 			isa = PBXGroup;
 			children = (
-				798D9C4F18D4E23400F0A2AB /* MECoreDataKit.h */,
-				798D9C5118D4E23400F0A2AB /* MECoreDataKit.m */,
+				798D9C7018D4E4CE00F0A2AB /* MECoreDataKit.h */,
+				798D9C7718D4E4E100F0A2AB /* Categories */,
 				798D9C4D18D4E23400F0A2AB /* Supporting Files */,
 			);
 			path = MECoreDataKit;
@@ -143,6 +151,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		798D9C7718D4E4E100F0A2AB /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				798D9C7118D4E4CE00F0A2AB /* NSManagedObject+MEExtensions.h */,
+				798D9C7218D4E4CE00F0A2AB /* NSManagedObject+MEExtensions.m */,
+				798D9C7318D4E4CE00F0A2AB /* NSManagedObjectContext+MEExtensions.h */,
+				798D9C7418D4E4CE00F0A2AB /* NSManagedObjectContext+MEExtensions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 798D9C6A18D4E23400F0A2AB /* Build configuration list for PBXNativeTarget "MECoreDataKit" */;
 			buildPhases = (
+				5DDDF7D5089B4EE396B9DC64 /* Check Pods Manifest.lock */,
 				798D9C4318D4E23400F0A2AB /* Sources */,
 				798D9C4418D4E23400F0A2AB /* Frameworks */,
 				798D9C4518D4E23400F0A2AB /* CopyFiles */,
+				281F63822B014EFBA793D9DF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,6 +208,7 @@
 		798D9C3F18D4E23400F0A2AB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ME;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Maestro, LLC.";
 			};
@@ -219,12 +241,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		281F63822B014EFBA793D9DF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-MECoreDataKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DDDF7D5089B4EE396B9DC64 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		798D9C4318D4E23400F0A2AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				798D9C5218D4E23400F0A2AB /* MECoreDataKit.m in Sources */,
+				798D9C7518D4E4CE00F0A2AB /* NSManagedObject+MEExtensions.m in Sources */,
+				798D9C7618D4E4CE00F0A2AB /* NSManagedObjectContext+MEExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,11 +386,12 @@
 		};
 		798D9C6B18D4E23400F0A2AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A6304DBA94C45FCA12CEE63 /* Pods-MECoreDataKit.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/MECoreDataKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MECoreDataKit/MECoreDataKit-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -342,11 +399,12 @@
 		};
 		798D9C6C18D4E23400F0A2AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A6304DBA94C45FCA12CEE63 /* Pods-MECoreDataKit.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/MECoreDataKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MECoreDataKit/MECoreDataKit-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -409,6 +467,7 @@
 				798D9C6C18D4E23400F0A2AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		798D9C6D18D4E23400F0A2AB /* Build configuration list for PBXNativeTarget "MECoreDataKitTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +476,7 @@
 				798D9C6F18D4E23400F0A2AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
