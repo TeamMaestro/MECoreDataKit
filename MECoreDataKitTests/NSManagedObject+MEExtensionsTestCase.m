@@ -30,12 +30,15 @@
 
 - (void)testME_JSONRepresentation {
     Item *item = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([Item class]) inManagedObjectContext:self.managedObjectContext];
+    NSDictionary *json = @{@"identity": [[NSUUID UUID] UUIDString],
+                           @"name": @"Willbur",
+                           @"order": @1};
     
-    [item setIdentity:[[NSUUID UUID] UUIDString]];
-    [item setName:@"Willbur"];
-    [item setOrder:@1];
+    [item setIdentity:json[@"identity"]];
+    [item setName:json[@"name"]];
+    [item setOrder:json[@"order"]];
     
-    XCTAssert([item ME_JSONRepresentation]);
+    XCTAssertEqualObjects([item ME_JSONRepresentation], json);
 }
 
 @end
