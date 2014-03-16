@@ -11,7 +11,7 @@ target :MECoreDataKitFramework do
   
   pod "MEFoundation", "~> 1.0.0"
   
-  link_with "MECoreDataKitFrameworkTests"
+  link_with "MECoreDataKitFramework"
 end
 
 workspace "MECoreDataKit"

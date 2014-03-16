@@ -345,7 +345,7 @@ static const void *kMEDefaultDateFormatterKey = &kMEDefaultDateFormatterKey;
                     if (attributeDesc.attributeValueClassName || attributeDesc.userInfo[@"attributeValueClassName"]) {
 #if defined(__MAC_OS_X_VERSION_MIN_REQUIRED)
                         if ([attributeDesc.userInfo[@"attributeValueClassName"] isEqualToString:NSStringFromClass([NSImage class])] && [value isKindOfClass:[NSString class]])
-                            [entity setValue:[[NSImage alloc] initWithData:[[UIImage alloc] initWithData:[[NSData alloc] initWithBase64EncodedString:value options:NSDataBase64DecodingIgnoreUnknownCharacters]]] forKey:propertyName];
+                            [entity setValue:[[NSImage alloc] initWithData:[[NSData alloc] initWithBase64EncodedString:value options:NSDataBase64DecodingIgnoreUnknownCharacters]] forKey:propertyName];
 #else
                         if ([attributeDesc.userInfo[@"attributeValueClassName"] isEqualToString:NSStringFromClass([UIImage class])] && [value isKindOfClass:[NSString class]])
                             [entity setValue:[[UIImage alloc] initWithData:[[NSData alloc] initWithBase64EncodedString:value options:NSDataBase64DecodingIgnoreUnknownCharacters]] forKey:propertyName];
