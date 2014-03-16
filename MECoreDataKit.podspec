@@ -11,6 +11,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "7.0"
   spec.osx.deployment_target = "10.9"
   
+  spec.dependency "MEFoundation", "~> 1.0.0"
   spec.requires_arc = true
   spec.frameworks = "Foundation", "CoreData"
   spec.ios.frameworks = "UIKit"
