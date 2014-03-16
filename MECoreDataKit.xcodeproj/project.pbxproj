@@ -22,6 +22,14 @@
 		79E1F9F918D4F8B400A2414E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E1F9E318D4F8B400A2414E /* Cocoa.framework */; };
 		79E1F9FC18D4F8B400A2414E /* MECoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E1F9E218D4F8B400A2414E /* MECoreDataKit.framework */; };
 		79E1FA0218D4F8B400A2414E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79E1FA0018D4F8B400A2414E /* InfoPlist.strings */; };
+		79E1FABB18D5489E00A2414E /* NSManagedObject+MEExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E1FABA18D5489E00A2414E /* NSManagedObject+MEExtensionsTestCase.m */; };
+		79E1FABE18D548C100A2414E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79E1FABC18D548C100A2414E /* Model.xcdatamodeld */; };
+		79E1FAC118D5494000A2414E /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E1FAC018D5494000A2414E /* Item.m */; };
+		79E1FAC318D54B0400A2414E /* NSManagedObject+MEExtensionsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E1FABA18D5489E00A2414E /* NSManagedObject+MEExtensionsTestCase.m */; };
+		79E1FAC418D54B0700A2414E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79E1FABC18D548C100A2414E /* Model.xcdatamodeld */; };
+		79E1FAC518D54B0E00A2414E /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E1FAC018D5494000A2414E /* Item.m */; };
+		79E1FAC618D54CF700A2414E /* Model.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 79E1FABC18D548C100A2414E /* Model.xcdatamodeld */; };
+		79E1FAC718D54CFA00A2414E /* Model.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 79E1FABC18D548C100A2414E /* Model.xcdatamodeld */; };
 		81E88E95909949C9A807A9D6 /* libPods-MECoreDataKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7C342302194B60A36698C7 /* libPods-MECoreDataKit.a */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +90,10 @@
 		79E1F9F718D4F8B400A2414E /* MECoreDataKitFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MECoreDataKitFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E1F9FF18D4F8B400A2414E /* MECoreDataKitFrameworkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MECoreDataKitFrameworkTests-Info.plist"; sourceTree = "<group>"; };
 		79E1FA0118D4F8B400A2414E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		79E1FABA18D5489E00A2414E /* NSManagedObject+MEExtensionsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+MEExtensionsTestCase.m"; sourceTree = "<group>"; };
+		79E1FABD18D548C100A2414E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		79E1FABF18D5494000A2414E /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		79E1FAC018D5494000A2414E /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		DF7C342302194B60A36698C7 /* libPods-MECoreDataKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MECoreDataKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -188,6 +200,7 @@
 		798D9C6018D4E23400F0A2AB /* MECoreDataKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				79E1FABA18D5489E00A2414E /* NSManagedObject+MEExtensionsTestCase.m */,
 				798D9C6118D4E23400F0A2AB /* Supporting Files */,
 			);
 			path = MECoreDataKitTests;
@@ -198,6 +211,8 @@
 			children = (
 				798D9C6218D4E23400F0A2AB /* MECoreDataKitTests-Info.plist */,
 				798D9C6318D4E23400F0A2AB /* InfoPlist.strings */,
+				79E1FABC18D548C100A2414E /* Model.xcdatamodeld */,
+				79E1FAC218D5495200A2414E /* CoreData */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -256,6 +271,15 @@
 				79E1FA0018D4F8B400A2414E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		79E1FAC218D5495200A2414E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				79E1FABF18D5494000A2414E /* Item.h */,
+				79E1FAC018D5494000A2414E /* Item.m */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				798D9C6518D4E23400F0A2AB /* InfoPlist.strings in Resources */,
+				79E1FAC618D54CF700A2414E /* Model.xcdatamodeld in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79E1FA0218D4F8B400A2414E /* InfoPlist.strings in Resources */,
+				79E1FAC718D54CFA00A2414E /* Model.xcdatamodeld in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +514,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79E1FAC118D5494000A2414E /* Item.m in Sources */,
+				79E1FABB18D5489E00A2414E /* NSManagedObject+MEExtensionsTestCase.m in Sources */,
+				79E1FABE18D548C100A2414E /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +531,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79E1FAC518D54B0E00A2414E /* Item.m in Sources */,
+				79E1FAC318D54B0400A2414E /* NSManagedObject+MEExtensionsTestCase.m in Sources */,
+				79E1FAC418D54B0700A2414E /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,7 +682,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MECoreDataKitFramework.framework/Versions/A/MECoreDataKitFramework";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/libMECoreDataKit.a";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -673,7 +705,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MECoreDataKitFramework.framework/Versions/A/MECoreDataKitFramework";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/libMECoreDataKit.a";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -691,6 +723,7 @@
 		79E1FA0618D4F8B400A2414E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -718,6 +751,7 @@
 		79E1FA0718D4F8B400A2414E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -837,6 +871,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		79E1FABC18D548C100A2414E /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				79E1FABD18D548C100A2414E /* Model.xcdatamodel */,
+			);
+			currentVersion = 79E1FABD18D548C100A2414E /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 798D9C3F18D4E23400F0A2AB /* Project object */;
 }

@@ -1,11 +1,15 @@
 target :MECoreDataKit do
-  pod "MEFoundation", "~> 1.0.3"
+  platform :ios, "7.0"
   
-  link_with "MECoreDataKit"
+  pod "MEFoundation", "~> 1.0.0"
+  
+  link_with "MECoreDataKitTests"
 end
 
-target :MECoreDataKitFramework do 
-  pod "MEFoundation", "~> 1.0.3"
+target :MECoreDataKitFramework do
+  platform :osx, "10.9"
+  
+  pod "MEFoundation", "~> 1.0.0"
   
   link_with "MECoreDataKitFrameworkTests"
 end
