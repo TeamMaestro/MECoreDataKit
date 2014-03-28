@@ -62,16 +62,14 @@
     return retval;
 }
 
-- (NSArray *)ME_objectsForObjectIDs:(NSArray *)objectIDs error:(NSError **)error; {
+- (NSArray *)ME_objectsForObjectIDs:(NSArray *)objectIDs; {
     NSMutableArray *retval = [NSMutableArray arrayWithCapacity:objectIDs.count];
     
     for (NSManagedObjectID *objectID in objectIDs) {
-        NSManagedObject *object = [self existingObjectWithID:objectID error:error];
+        NSManagedObject *object = [self objectWithID:objectID];
         
-        if (!object)
-            break;
-        
-        [retval addObject:object];
+        if (object)
+            [retval addObject:object];
     }
     
     return retval;
