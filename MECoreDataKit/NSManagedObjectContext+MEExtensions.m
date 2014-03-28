@@ -123,7 +123,7 @@
         if (objectIDs) {
             [context.parentContext performBlock:^{
                 NSError *outError;
-                NSArray *objects = [context.parentContext ME_objectsForObjectIDs:objectIDs error:&outError];
+                NSArray *objects = [context.parentContext ME_objectsForObjectIDs:objectIDs];
                 
                 completion(objects,outError);
             }];
