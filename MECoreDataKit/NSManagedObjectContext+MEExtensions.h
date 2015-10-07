@@ -127,4 +127,24 @@
  @param error A pointer to an `NSError` object. If this method returns nil and _error_ is non-nil, error will point to an `NSError` that describes the reason for failure
  */
 - (NSManagedObject *)ME_managedObjectWithDictionary:(NSDictionary *)dictionary entityName:(NSString *)entityName propertyTransformer:(NSValueTransformer *)propertyTransformer includeProperties:(BOOL)includeProperties includeRelationships:(BOOL)includeRelationships error:(NSError **)error;
+
+
+/**
+ Creates or updates an entity in the receiver from the given dictionary as above, but will skip the initial entity fetch and assume that the 
+ record is to be inserted. You would call this method typically when seeding your store as a first time load operation.
+
+ @param dictionary A dictionary of attributes and relationships
+ @param entityName The name of the entity to create
+ @param propertyTransformer A value transformer that will transform the property name the dictionary into the property name of the model. If nil, the property names in the dictionary must match the property names in the model exactly
+ @param includeProperties Whether properties in addition to the identity property will be updated
+ @param includeRelationships Whether relationships will be followed and populated
+ @param skipLookup set to YES to bypass the entity lookup and insert only
+ @param error A pointer to an `NSError` object. If this method returns nil and _error_ is non-nil, error will point to an `NSError` that describes the reason for failure
+ 
+ */
+- (NSManagedObject *)ME_managedObjectWithDictionary:(NSDictionary *)dictionary entityName:(NSString *)entityName propertyTransformer:(NSValueTransformer *)propertyTransformer includeProperties:(BOOL)includeProperties includeRelationships:(BOOL)includeRelationships skipLookup:(BOOL)skipLookup error:(NSError **)error;
+
+
+
+
 @end

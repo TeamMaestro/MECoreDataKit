@@ -275,6 +275,13 @@ static const void *kMEDefaultDateFormatterKey = &kMEDefaultDateFormatterKey;
     }];
 }
 - (NSManagedObject *)ME_managedObjectWithDictionary:(NSDictionary *)dictionary entityName:(NSString *)entityName propertyTransformer:(NSValueTransformer *)propertyTransformer includeProperties:(BOOL)includeProperties includeRelationships:(BOOL)includeRelationships error:(NSError **)error; {
+    
+    return [self ME_managedObjectWithDictionary:dictionary entityName:entityName propertyTransformer:propertyTransformer includeProperties:includeProperties includeRelationships:includeRelationships skipLookup:NO error:error];
+    
+}
+
+- (NSManagedObject *)ME_managedObjectWithDictionary:(NSDictionary *)dictionary entityName:(NSString *)entityName propertyTransformer:(NSValueTransformer *)propertyTransformer includeProperties:(BOOL)includeProperties includeRelationships:(BOOL)includeRelationships skipLookup:(BOOL)skipLookup error:(NSError **)error; {
+    
     NSParameterAssert(dictionary);
     NSParameterAssert(entityName);
     
@@ -283,7 +290,14 @@ static const void *kMEDefaultDateFormatterKey = &kMEDefaultDateFormatterKey;
     
     NSParameterAssert(identity);
     
-    NSManagedObject *entity = [self ME_fetchEntityNamed:entityName limit:1 predicate:[NSPredicate predicateWithFormat:@"%K == %@",kIdentityPropertyName,identity] sortDescriptors:nil error:NULL].lastObject;
+    NSManagedObject *entity;
+    
+    if (skipLookup) {
+        entity = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:self];
+        [entity setValue:identity forKey:kIdentityPropertyName];
+    } else {
+        entity = [self ME_fetchEntityNamed:entityName limit:1 predicate:[NSPredicate predicateWithFormat:@"%K == %@",kIdentityPropertyName,identity] sortDescriptors:nil error:NULL].lastObject;
+    }
     
     if (!entity) {
         entity = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:self];
@@ -292,6 +306,7 @@ static const void *kMEDefaultDateFormatterKey = &kMEDefaultDateFormatterKey;
         
         MELog(@"created entity %@ with identity %@",entityName,identity);
     }
+
     
     NSEntityDescription *entityDesc = [NSEntityDescription entityForName:entityName inManagedObjectContext:self];
     
