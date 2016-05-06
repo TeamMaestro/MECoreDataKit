@@ -286,7 +286,7 @@ static const void *kMEDefaultDateFormatterKey = &kMEDefaultDateFormatterKey;
     NSParameterAssert(entityName);
     
     NSString *const kIdentityPropertyName = [self.class ME_defaultIdentityKey];
-    id identity = (propertyTransformer) ? dictionary[[propertyTransformer reverseTransformedValue:kIdentityPropertyName]] : dictionary[kIdentityPropertyName];
+    id identity = (propertyTransformer) ? dictionary[[propertyTransformer transformedValue:kIdentityPropertyName]] : dictionary[kIdentityPropertyName];
     
     NSParameterAssert(identity);
     
