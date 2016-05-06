@@ -1,10 +1,10 @@
 PODS:
-  - MEFoundation (1.0.3)
+  - MEFoundation (1.0.10)
 
 DEPENDENCIES:
   - MEFoundation (~> 1.0.0)
 
 SPEC CHECKSUMS:
-  MEFoundation: 3b09ef7a4ab91d01f16dab805605c03cf9d4f0cd
+  MEFoundation: 395072f0f40587b2912182a1eb3a2363a54bbd74
 
-COCOAPODS: 0.29.0
+COCOAPODS: 0.39.0
