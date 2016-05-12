@@ -8,10 +8,10 @@ Pod::Spec.new do |spec|
   spec.summary = "A collection of classes that extend the CoreData framework."
   spec.description = "Convenience methods for fetch requests, saving recursively, and importing from or converting to/from JSON sources are included."
 
-  spec.ios.deployment_target = "7.0"
+  spec.ios.deployment_target = "8.0"
   spec.osx.deployment_target = "10.9"
 
-  spec.dependency "MEFoundation", "~> 1.0.0"
+  spec.dependency "MEFoundation", "~> 1.1.0"
   spec.requires_arc = true
   spec.frameworks = "Foundation", "CoreData"
   spec.ios.frameworks = "UIKit"
